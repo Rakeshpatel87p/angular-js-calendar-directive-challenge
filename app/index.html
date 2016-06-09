@@ -10,15 +10,9 @@
     <select ng-model="monthSelected" ng-options="month for month in monthsSelector"></select>
     <select ng-model="yearSelected" ng-options="year for year in years"></select>
     <button ng-click="submission()">Submit</button>
-    <ul id="Grid">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li class="placeholder"></li>
-        <li></li>
-    </ul>
+<div class="container">
+    <div class="column" ng-repeat="day in days">{{day.day}}</div>
+</div>
     <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
     <script type="text/javascript" src="./app.js"></script>
