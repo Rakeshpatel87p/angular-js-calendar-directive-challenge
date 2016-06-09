@@ -14,8 +14,8 @@ var calendarDemoApp = angular.module('calendarDemoApp', [])
         $scope.yearSelected = d.getFullYear();
         
         $scope.submission = function(){
-            console.log($scope.monthSelected.toString(), $scope.yearSelected.toString())
             $scope.days = CalendarRange.getMonthlyRange($scope.monthSelected.toString() + $scope.yearSelected.toString()).days;
+
         }
 
         $scope.years = [];
