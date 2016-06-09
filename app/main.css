@@ -1,1 +1,23 @@
-/* your css code goes here */
+div, ul, li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* -- FLUID GRID STYLES -- */
+
+#Grid{
+  margin-bottom: 40px;
+  text-align: justify;
+  font-size: 0.1px;
+}
+
+#Grid li{
+  display: inline-block;
+  background: #eee;
+  width: 10%;
+  padding-top: 23%; /* Used instead of height to give elements fluid, width-based height */
+  margin-bottom: 2.5%;/* your css code goes here */
+  padding-bottom:2.5%;
+  padding:3%;
+  border: 1px solid black;
