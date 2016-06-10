@@ -16,6 +16,11 @@ div, ul, li{
     height:9em;
 }
 
+.selectionBar {
+	background-color: black;
+	padding-bottom:1%;
+}
+
 .color {
-	background-color: grey;
+	background-color: #d3d3d3;
 }

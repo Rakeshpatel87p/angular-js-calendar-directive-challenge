@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="calendarDemoApp">
+<html ng-app="calendarDemoApp" ng-init="submission()">
 
 <head>
     <title>Calendar Directive Challenge</title>
@@ -7,15 +7,18 @@
 </head>
 
 <body ng-controller="dataCompiler">
-    <select ng-model="monthSelected" ng-options="month for month in monthsSelector"></select>
-    <select ng-model="yearSelected" ng-options="year for year in years"></select>
-    <button ng-click="submission()">Submit</button>
-<div class="container">
-    <div class="column" ng-repeat="day in days" ng-class="{color: day.month != monthsSelector.indexOf(monthSelected)}">{{day.day}}</div>
-</div>
+    <div class="selectionBar">
+        <select ng-model="monthSelected" ng-options="month for month in monthsSelector"></select>
+        <select ng-model="yearSelected" ng-options="year for year in years"></select>
+        <button ng-click="submission()">Submit</button>
+    </div>
+    <div class="container">
+        <div class="column" ng-repeat="day in days" ng-class="{color: day.month != days[15].month}">{{day.day}}</div>
+    </div>
     <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
     <script type="text/javascript" src="./app.js"></script>
 </body>
 
 </html>
+
